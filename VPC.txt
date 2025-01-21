@@ -1,0 +1,65 @@
+ipconfig = To list all the IP address in windows
+
+ifconfig = To list all the TP address in Linus
+
+http://whatismyipaddress.com/ = To know the Public IP of our network
+http://whatismyip.com/
+
+THIS ARE PRIVATE IPS
+---------------------
+A = 10.0.0.0    - 10.255.255.255   Highest range = 10.0.0.0/16 = 65,536  ==> 65,536-5 = 65,531
+B = 172.16.0.0  - 172.32.255.255   Lowest  range = 10.0.0.0/24 = 256     ==> 256-5  = 251
+C = 192.168.0.0 - 192.168.255.255
+
+General N/W : 2 IPS reserved   
+    AWS     : 3 IPS reserved 
+
+Class A  : N.H.H.H : 127 Networks, Each network supports 16M hosts. 
+Class B  : N.N.H.H : 16,000 Network, Each network supports ,Each network supports 65,000 Hosts
+Class: N.N.N.H : 2M Networks, Each network supports 256 Hosts.
+
+CIDR Block Range = 10.0.0.0/16 = 65536 IP's (Maximum)
+                 = 10.0.0.0/24 = 256 IP's   (Minimum)
+
+
+JUMP Server :
+------------
+        A jump server (or jump box) is a secure, intermediary server used to connect to other servers or devices in a private network. It acts as a bridge between the external network (e.g., the internet) and the internal, secure network.
+
+ Prevents direct access to sensitive servers from the internet, Acts as a single entry point.
+
+
+VPC Flow Logs :
+--------------
+   It is used to monitor the traffic or request that are performed in the VPC level.  
+
+
+Difference between NAT Gateway AND Internet Gateway :
+----------------------------------------------------
+
+NAT Gateway 
+----------- 
+ 1) Allows resources in private subnets to access the internet (outbound only), but We can't directly access the resources that are present in the private .
+ 
+ 2) It is deployed in a public subnet but used by private subnets for outbound internet access.
+ 
+ 3) It has only one way access to the internet (Outbound only - one way connection).
+
+Internet Gateway
+----------------
+
+1) Directly connects public subnets to the internet , we can access the resources through the internet.
+
+2) It is attached at the VPC level, making it accessible for public subnets in the VPC.
+
+3) It has access for both in bounded and out bounded traffic (Two way connection).
+   
+
+To make VPC more secure :
+---------------------------
+
+NACL = It works at subnet level 
+
+Security GROUP =  It works at resources level
+
+
