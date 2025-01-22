@@ -17,16 +17,14 @@ docker run --rm -v mkvol:/data alpine ls /data - To find the data present in the
 
 docker volume prune - delete all the volumes that are left out in the docker
 
-docker exec -it (contain id) bash -  exec = execution , -it = interactive terminal 
-                                          to get access or to enter into the running docker  container
+docker exec -it (contain id) bash -  to get access or to enter into the running docker  container
 
 docker build(path) -t  - it will build a  image from a dockerfile
--t or --tag  - sets a name and optionally a tag
 
 docker run -v my-volume:/app-data:ro ubuntu - To prevent containers from modifying the volume
 
-
 docker start (volume),docker attach (volume)- to list the data present in volumes 
+
 
 
 CONTAINERS COMMANDS:
@@ -56,33 +54,6 @@ unless-stopped = docker run --name xyz --restart unless-stopped alpine sleep 10
 on failure     = docker run --name hi --restart on-failure alpine sleep 10
 
 
-
-
-docker images -to list the images 
-
-docker ps     - to list the containers
-
-docker pull(image name):tag(version) - to download the image 
-
-docker push(image name):tag(version) - to upload the image
-
-docker run(image name) - to run the image and creates a container for that image
-
-docker run -d or --detach(image name) - Runs container in background and prints the container ID
-
-docker logs(container id) - views logs from service running inside the container
-
-docker stop(container id) - to stop the container
-
-docker run -d -p(image name):tag - publish a container's port to host
-
-docker run -d -p 8080:80 (image name):tag -to run in our local machine
-
-docker ps -a or --all -Lists all containers(stopped or started)
-
-docker start (container) - to start a specific container
-
-docker run --name - assign a name to the container
 
 
   docker info - it gives the system information
@@ -180,29 +151,7 @@ DOCKER_COMPOSE COMMANDS :
 
 
  
-  
-
-
-
-
-
-
-
-
-
-
-HERE ONLY 1 SERVER CAN RUN ON SINGLE PORT
-
-
-TO INSTALL DOCKER IN EC2 INSTANCE
----------------------------------
-   1- sudo yum update -y
-   2- sudo yum install docker -y
-   3- 	
-   4- 	
-   5- sudo usermod -aG docker $USER
-   6- docker --version
-
+ 
 
 
 TO CREATE A DOCKER FILE AND TO DEPLOY A SAMPLE WAR/JAR FILE AS A DOCKER CONTAINER
